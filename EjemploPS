@@ -1,0 +1,19 @@
+# Solicitar el nombre de la carpeta
+$Carpeta = Read-Host "Ingrese la ruta de la carpeta: "
+
+    # Mostrar información
+    Write-Host "Información de la carpeta: $Carpeta"
+    Get-Item $Carpeta
+
+    # Preguntar si desea limpiar la carpeta
+    $respuesta = Read-Host "¿Desea limpiar la carpeta eliminando todos los archivos? (Sí/No): "
+
+    if ($respuesta -eq "Sí") {
+
+        # Elimina el contenido de la carpeta
+        Clear-Item -Path $Carpeta
+        Write-Host "Limpieza ejecutada con éxito."
+
+    } else {
+        Write-Host "No se ha realizado ninguna acción."
+    }
