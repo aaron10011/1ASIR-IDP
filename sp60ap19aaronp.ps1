@@ -1,0 +1,1 @@
+Get-Service -Name "*sys*" | Group-Object Status
